@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* --- Typing Area --- */
+.typing-area {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ecf0f1;
+}
+
+.text-display {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    height: 120px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.char {
+    transition: background-color 0.1s;
+    padding: 1px 0;
+    border-radius: 2px;
+}
+
+.correct {
+    color: #2ecc71; /* Green */
+}
+
+.incorrect {
+    color: #e74c3c; /* Red */
+    border-bottom: 2px solid #e74c3c;
+}
+
+.current {
+    background-color: #bdc3c7;
+    border-radius: 4px;
+    padding: 1px 0;
+}
+
+.text-input {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #3498db; /* Blue focus border */
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Hide the actual textarea's input visually but keep it for focus */
+.text-input:not(:focus) {
+    border-color: #ccc;
+}
+.text-input[disabled] {
+    cursor: not-allowed;
+    background-color: #eee;
+}
+
+/* --- Results --- */
+.results-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+}
+
+.stat {
+    text-align: center;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.restart-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.restart-btn:hover {
+    background-color: #2980b9;
+}
+
+/* --- Footer (Mugesh Branding) --- */
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
